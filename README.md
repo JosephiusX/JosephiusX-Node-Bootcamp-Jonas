@@ -34,4 +34,7 @@ Section 6 Express: Let's Start Building the Natours API
 
 52. Starting Our API : Handling GET Requests
 
-https://www.natours.dev/api/v1/tours
+        what we will be building
+            https://www.natours.dev/api/v1/tours
+
+53. Handling POST Requests
