@@ -31,3 +31,7 @@ Section 6 Express: Let's Start Building the Natours API
 
                 5. Must be statless
                     Stateless RESTful API: All state is handled on the client. This means that each request must contain all the information nessessary to process a certian request the server should not have to remember previous requests
+
+52. Starting Our API : Handling GET Requests
+
+https://www.natours.dev/api/v1/tours
