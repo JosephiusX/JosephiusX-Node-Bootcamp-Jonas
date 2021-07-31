@@ -14,7 +14,7 @@ const app = express();
 // });
 
 const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/dev-data/david/tours-simple.json`)
+  fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
 
 app.get('/api/v1/tours', (req, res) => {
@@ -25,8 +25,6 @@ app.get('/api/v1/tours', (req, res) => {
     },
   });
 });
-
-const tours = fs.app.get('api/v1/tours', (req, res) => {});
 
 const port = 3000;
 app.listen(port, () => {
