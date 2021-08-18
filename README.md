@@ -64,3 +64,6 @@ Section 6 Express: Let's Start Building the Natours API
 
         mkdir routes
             in it touch tourRouts.js and userRoutes.js
+
+        mkdir controllers
+            in it touch tourController.js and userController.js
