@@ -60,4 +60,7 @@ Section 6 Express: Let's Start Building the Natours API
 
 ## 62. creating ang mounting multiple routes
 
-##
+## 63. a better file structure
+
+        mkdir routes
+            in it touch tourRouts.js and userRoutes.js
