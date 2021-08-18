@@ -47,4 +47,6 @@ Section 6 Express: Let's Start Building the Natours API
 
 ## 57. Refactor
 
-## 58.
+## 58. Middleware and the request response cycle
+
+## 59. Creating Our Own Middleware
