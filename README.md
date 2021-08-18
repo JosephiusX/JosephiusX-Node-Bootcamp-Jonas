@@ -50,3 +50,8 @@ Section 6 Express: Let's Start Building the Natours API
 ## 58. Middleware and the request response cycle
 
 ## 59. Creating Our Own Middleware
+
+## 60. Using 3rd-Party Middleware
+
+        npm middleware for denelopment
+            npm i@1.9.1
