@@ -69,3 +69,10 @@ Section 6 Express: Let's Start Building the Natours API
             in it touch tourController.js and userController.js
 
 ## 64. Param Middleware
+
+            ??????? get tour route giving me 500
+                    - git stash reveals the problem is not likely on this commit
+                    - the route and middle ware seem to be working , so maybe its a logic issue in the route( controller)
+                    - it is properly validating the validity of the id if I type a Id that dosent exist?
+                    so how can id be undefined
+            ******* i changed const to exports. on some variables in get route and update route by accident

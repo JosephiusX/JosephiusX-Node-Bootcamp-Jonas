@@ -13,7 +13,7 @@ app.use(express.json()); // allows express middleware for all routes , for json
 
 //  middleware applies to each and every request THAT COMES AFTER IT
 app.use((req, res, next) => {
-  console.log('hello fromthe middleware 👋');
+  console.log('hello from the middleware 👋');
   next();
 });
 
