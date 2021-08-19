@@ -82,3 +82,14 @@ Section 6 Express: Let's Start Building the Natours API
 ## 66. Serving Static Files
 
 to access something from our file system, we need to use a built in express middleware
+
+## 67. Environment Variables
+
+            touch config.env
+
+            npm i dotenv
+                require in server.js
+
+            I have the USER set to jonas instead on USERNAME , because USERNAME is already taken.
+
+???????

@@ -7,7 +7,10 @@ const userRouter = require('./routes/userRoutes.js');
 const app = express();
 
 // 1) MIDDLEWARES
-app.use(morgan('dev')); // retirns function like middleware below
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
 app.use(express.json()); // allows express middleware for all routes , for json
 app.use(express.static(`${__dirname}/public`)); // built in express middleware for rendering static html
 
