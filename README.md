@@ -93,3 +93,16 @@ to access something from our file system, we need to use a built in express midd
             I have the USER set to jonas instead on USERNAME , because USERNAME is already taken.
 
 ???????
+
+## 68. Setting up esLing + Prettier in VS Code
+
+          eslint": "^5.16.0",
+         "eslint-config-airbnb": "^17.1.0",
+         "eslint-config-prettier": "^4.1.0",
+         "eslint-plugin-import": "^2.17.2",
+         "eslint-plugin-node": "^8.0.1",
+         "eslint-plugin-prettier": "^3.0.1",
+         "eslint-plugin-react": "^7.12.4",
+         "prettier": "^1.17.0"
+
+not working
