@@ -78,3 +78,7 @@ Section 6 Express: Let's Start Building the Natours API
             ******* i changed const to exports. on some variables in get route and update route by accident
 
 ## 65. Chaining Multiple Middleware Functions
+
+## 66. Serving Static Files
+
+to access something from our file system, we need to use a built in express middleware

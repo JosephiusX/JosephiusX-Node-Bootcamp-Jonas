@@ -8,8 +8,8 @@ const app = express();
 
 // 1) MIDDLEWARES
 app.use(morgan('dev')); // retirns function like middleware below
-
 app.use(express.json()); // allows express middleware for all routes , for json
+app.use(express.static(`${__dirname}/public`)); // built in express middleware for rendering static html
 
 //  middleware applies to each and every request THAT COMES AFTER IT
 app.use((req, res, next) => {
