@@ -158,6 +158,16 @@ eslint not working
 
 plus theres a bunch more operators to learn about
 
-## 76 CRUD: Documents
+## 76 CRUD: Updating Documents
 
-## 77 CRUD: Documents
+        selecting tour by name and resetting price:
+            db.tours.updateOne({ name: "The Snow Adventure"}, { $set: {price: 597}})
+                ???? acknoledged but no matchcount and modifiedcount are 0.
+                ***** mispelled in db Adveture
+                ???? still not working
+
+        create new properties and set thease to new values
+            db.tours.updateMany({price: {$gt: 500}, rating: {$gt: 4.8} }, {$set: {premium: true}})
+                // selected tour with price greater than 500 and rating greater than 4.8, and gave it a value of primium with a key of true
+
+## 77 CRUD: Deleting Documents
