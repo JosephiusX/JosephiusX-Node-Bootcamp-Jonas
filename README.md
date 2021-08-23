@@ -1,4 +1,4 @@
-Section 6 Express: Let's Start Building the Natours API
+lSection 6 Express: Let's Start Building the Natours API
 
 50.   Setting up Express and Basic Routing
 
@@ -110,3 +110,31 @@ eslint not working
 ## sec 7
 
 ## 73 Creating a local Database
+
+        BASIC COMMANDS:
+            - use natours-test
+
+            - db.tours.insertOne({name: "The Forest Hiker", price:297, rating:4.7})
+
+            - show dbs
+
+            - use.admin
+
+            - use natours-test
+
+            - show collections
+
+            - quit()
+
+## 74 CRUD: Creating Documents
+
+            create 2 documents at once
+                db.tours.insertMany([{name: "The Sea Explorer", price: 498, rating: 4.8}, {name: "The Show Adveture", price:997, rating: 4.9, difficulty:"easy"}])
+
+                // they can have different structure
+
+## 75 CRUD: Documents
+
+## 76 CRUD: Documents
+
+## 77 CRUD: Documents
