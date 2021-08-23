@@ -133,7 +133,30 @@ eslint not working
 
                 // they can have different structure
 
-## 75 CRUD: Documents
+## 75 CRUD: (Reading) Documents
+
+        finds all in collection:
+            db.tours.find()
+
+        or with search criteria:
+            db.tours.find({name: "The Forest Hiker"})
+            db.tours.find({difficulty: "easy"})
+
+        tour with price < 500:
+            db.tours.find({ price: {$lte: 500}})
+
+        with 2 search criteria both true( price < 500 &&  rating >=  4.8):
+            db.tours.find({price: {$lt: 500}, rating: {$gte: 4.8}})
+
+        2 search criteria one true (price > 500 || rating <= 4.8) :
+            db.tours.find({ $or: [price: {$lt: 500}}, {rating: {$gte: 4.8}} ] })
+                // we start with an or operator and an array of criteria, only one needs to be true
+
+        select field in an object:
+            db.tours.find({price: {$gte: 500}, rating: {$gte: 4.8}}, {name: 1})
+                // only shows name output and id and excludes other fields
+
+plus theres a bunch more operators to learn about
 
 ## 76 CRUD: Documents
 
