@@ -171,3 +171,9 @@ plus theres a bunch more operators to learn about
                 // selected tour with price greater than 500 and rating greater than 4.8, and gave it a value of primium with a key of true
 
 ## 77 CRUD: Deleting Documents
+
+        delete object with rating lower than 4.8
+            db.tours.deleteMany({rating: {$lt: 4.8}})
+
+        delete entire collection:
+            db.tours.deleteMany({})
