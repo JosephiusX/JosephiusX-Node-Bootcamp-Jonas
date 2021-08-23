@@ -177,3 +177,41 @@ plus theres a bunch more operators to learn about
 
         delete entire collection:
             db.tours.deleteMany({})
+
+## 78. Using Compass App for CRUD Operations
+
+## 79. Creating a Hosted Database with Atlas
+
+## 80. Connecting to our hosted database
+
+we are going to do our dev in atlas instead of locally
+
+        in Database Access create new user and generate password, as well as the template for connecting
+            fill in password and username as instructed
+
+        click connect btn on the database cluster in atlas
+            select compass option
+
+        enter connetion template with credentials
+
+        click create database
+
+        whitelist ip address on atlas
+            data access > add ip address > 0.0.0.0/0
+                allows access from anywhere
+
+        connect mongo shell to cluster
+            databases > connect > Mongo Db Shell >
+
+        follow instructions and save string for use in app
+
+        close out of current mongo shell if nessessary
+
+        paste connection string after mongo in command line
+            mongo "mongodb+srv://cluster0.ftpuy.mongodb.net/natours" --username natours-user
+
+            // result:
+                 MongoDB Enterprise atlas-6nslgw-shard-0:PRIMARY>
+
+        show dbs
+            should show database we created
