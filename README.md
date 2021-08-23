@@ -215,3 +215,9 @@ we are going to do our dev in atlas instead of locally
 
         show dbs
             should show database we created
+
+        switch to natours:
+            use natours
+
+        find tours:
+            db.tours.find()
