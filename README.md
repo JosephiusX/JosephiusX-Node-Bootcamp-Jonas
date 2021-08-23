@@ -92,7 +92,7 @@ to access something from our file system, we need to use a built in express midd
 
             I have the USER set to jonas instead on USERNAME , because USERNAME is already taken.
 
-???????
+??????? not sure if this lesson is done properly
 
 ## 68. Setting up esLing + Prettier in VS Code
 
@@ -105,4 +105,8 @@ to access something from our file system, we need to use a built in express midd
          "eslint-plugin-react": "^7.12.4",
          "prettier": "^1.17.0"
 
-not working
+eslint not working
+
+## sec 7
+
+## 73 Creating a local Database
