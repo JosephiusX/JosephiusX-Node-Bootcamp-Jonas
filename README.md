@@ -221,3 +221,7 @@ we are going to do our dev in atlas instead of locally
 
         find tours:
             db.tours.find()
+
+## sec8 Using MongoDB with Mongoose
+
+## 82. Connecting Our Database with the Express App
