@@ -268,3 +268,26 @@ setup server.js file to require mongoose, set the password in in the env file, a
     });
 
 then we drop tour database to start fresh
+
+## 84. What is Mongoose?
+
+## 85. Creating simple tour model
+
+set up tour model in server.js for now
+
+    const tourSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, 'A tour must have a name'], // error message
+        unique
+    },
+    rating: {
+        type: Number,
+        default: 4.5
+    },
+    price: {
+        type: Number,
+        required: [true, 'A tour must have a price']
+    }
+    });
+    const Tour = mongoose.model('Tour', tourSchema);
