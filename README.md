@@ -291,3 +291,22 @@ set up tour model in server.js for now
     }
     });
     const Tour = mongoose.model('Tour', tourSchema);
+
+## 85. Creating Documents and Testing the Model
+
+create document from our code with our mongoose model
+
+    const testTour = new Tour({
+    name: 'The Forest Hiker',
+    rating: 4.7,
+    price: 497
+    });
+
+    testTour
+    .save()
+    .then(doc => {
+        console.log(doc);
+    })
+    .catch(err => {
+        console.log('ERROR 💥:', err);
+    });
