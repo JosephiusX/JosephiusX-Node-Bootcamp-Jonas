@@ -160,13 +160,15 @@ plus theres a bunch more operators to learn about
 
 ## 76 CRUD: Updating Documents
 
-        selecting tour by name and resetting price:
+selecting tour by name and resetting price:
+
             db.tours.updateOne({ name: "The Snow Adventure"}, { $set: {price: 597}})
                 ???? acknoledged but no matchcount and modifiedcount are 0.
                 ***** mispelled in db Adveture
                 ???? still not working
 
-        create new properties and set thease to new values
+create new properties and give them new values
+
             db.tours.updateMany({price: {$gt: 500}, rating: {$gt: 4.8} }, {$set: {premium: true}})
                 // selected tour with price greater than 500 and rating greater than 4.8, and gave it a value of primium with a key of true
 
@@ -350,3 +352,7 @@ we cant always entirely seporate buisness logic and application logic , but its 
         comment out line 6 in tourRoutes
 
 ## 88 Another Way of Creating Documents
+
+## 89 Reading Documents
+
+\_id is the name of mongo ids

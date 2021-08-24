@@ -1,31 +1,42 @@
 const fs = require('fs');
 const Tour = require('../models/tourModel');
 
-exports.getAllTours = (req, res) => {
-  console.log(req.requestTime);
+exports.getAllTours = async (req, res) => {
+  try {
+    const tours = await Tour.find(); // returns a promise so should awaited
 
-  res.status(200).json({
-    status: 'success',
-    requestedAt: req.requestTime
-    // results: tours.length,
-    // data: {
-    //   tours,
-    // },
-  });
+    res.status(200).json({
+      status: 'success',
+      results: tours.length,
+      data: {
+        tours
+      }
+    });
+  } catch (err) {
+    res.status(404).json({
+      status: 'fail',
+      message: err
+    });
+  }
 };
 
-exports.getTour = (req, res) => {
-  console.log(req.params);
-  const id = req.params.id * 1; // trick for converting string to number
+exports.getTour = async (req, res) => {
+  try {
+    const tour = await Tour.findById(req.params.id);
+    // Tour.fimdOne({ _id: req.params.id })
 
-  const tour = tours.find(el => el.id === id); // find -array method that loops through array and returns either true or false for eacch element based on paramiters set
-
-  // res.status(200).json({
-  //   status: 'success',
-  //   data: {
-  //     tour // shorthand for tours : tours
-  //   }
-  // });
+    res.status(200).json({
+      status: 'success',
+      data: {
+        tour
+      }
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'fail',
+      message: err
+    });
+  }
 };
 
 exports.createTour = async (req, res) => {
