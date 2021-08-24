@@ -358,3 +358,7 @@ we cant always entirely seporate buisness logic and application logic , but its 
 \_id is the name of mongo ids
 
 ## 90. Updating Documents
+
+## 91. Delete Documents
+
+## 92. Modelling the Tours
