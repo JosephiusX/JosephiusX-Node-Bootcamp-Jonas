@@ -310,3 +310,24 @@ create document from our code with our mongoose model
     .catch(err => {
         console.log('ERROR 💥:', err);
     });
+
+## 86. Intro to Back-End Architecture:MVC, Types of Logic, and More
+
+    MODEL: buisness logic
+        Code that actually solves the business problem we set out to solve;
+        👉Directly related to business rules, how the business works, and business needs;
+        👉Examples:
+        👉Creating new tours in the database;
+        👉Checking if user’s password is correct;
+        👉Validating user input data;
+        👉Ensuring only users who bought a tour can review it
+
+    CONTROLLER: application logic
+        Code that is only concerned about the application’s implementation, not the underlying business problem we’re trying to solve (e.g. showing and selling tours);
+        👉Concerned about managing requests and responses;
+        👉About the app’s more technical aspects;
+        👉Bridge between model and view layers
+
+    VIEW: presentation logic
+
+Fat models/thin controllers: offload as much logic as possible into the models, and keep the controllers as simple and lean as possible.
