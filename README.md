@@ -207,7 +207,7 @@ we are going to do our dev in atlas instead of locally
 
         close out of current mongo shell if nessessary
 
-        paste connection string after mongo in command line
+        paste connection string after mongo in command line:
             mongo "mongodb+srv://cluster0.ftpuy.mongodb.net/natours" --username natours-user
 
             // result:
@@ -225,3 +225,46 @@ we are going to do our dev in atlas instead of locally
 ## sec8 Using MongoDB with Mongoose
 
 ## 82. Connecting Our Database with the Express App
+
+to get the connection string for use in app
+
+        in atlas
+            databases > connect > connect to your application
+                follow directions and copy connection string
+        create it as env variable DATABASE
+
+        make variable for local database while were at it
+
+install mongoose driver
+
+        npm i mongoose@5
+
+        we configure in server.js file
+
+setup server.js file to require mongoose, set the password in in the env file, and setup mongoose connection logic
+
+    const mongoose = require('mongoose');
+    const dotenv = require('dotenv');
+    const app = require('./app');
+
+    dotenv.config({ path: './config.env' });
+
+    const DB = process.env.DATABASE.replace(
+    '<PASSWORD>',
+    process.env.DATABASE_PASSWORD
+    );
+
+    mongoose
+    .connect(DB, {
+        userNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    })
+    .then(() => console.log('DB connection successful!'));
+
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+    console.log(`App running on port ${port}...`);
+    });
+
+then we drop tour database to start fresh
